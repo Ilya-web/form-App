@@ -12,7 +12,6 @@
 .step {
     position: relative;
     width: 50%;
-
 }
 .step:last-child {
     width: 24px;
