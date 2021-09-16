@@ -1,0 +1,66 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 15px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.step {
+    position: relative;
+    width: 50%;
+
+}
+.step:last-child {
+    width: 24px;
+}
+.step span {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #d9d9d9;
+    z-index: 2;
+    font-size: 14px;
+    line-height: 1;
+}
+.step:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: #d9d9d9;
+}
+.step:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 0;
+    background: #1890ff;
+    height: 1px;
+    transition: width ease 0.3s;
+
+}
+.step.active:after {
+    width: 100%;
+}
+.step.active span {
+    background: #1890ff;
+}
+.step:first-child span {
+    background: #1890ff;
+}
